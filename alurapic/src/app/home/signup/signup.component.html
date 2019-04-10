@@ -29,7 +29,7 @@
         </app-vmessage>
         <app-vmessage *ngIf="signupForm.get('userName').errors?.lowerCase" text="Must be lower case">
         </app-vmessage>
-        <app-vmessage text="Username already taken" *ngIf="signupForm.get('userName').errors?.userNameTaken">
+        <app-vmessage *ngIf="signupForm.get('userName').errors?.userNameTaken" text="Username already taken">
         </app-vmessage>
         <small *ngIf="signupForm.get('userName').valid" class="text-success">User available</small>
     </div>
